@@ -1,0 +1,56 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "acc new (コンテストのダウンロード)",
+            "type": "shell",
+            "command": "acc",
+            "args": [
+                "new",
+                "${input:contestID}"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}/contests"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "test && submit",
+            "dependsOn": [
+                "Run oj",
+                "Run acc"
+            ],
+            "dependsOrder": "sequence",
+            "problemMatcher": []
+        },
+        {
+            "label": "Run oj",
+            "type": "shell",
+            "command": "oj t -c 'python3 main.py' -d ./tests/",
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Run acc",
+            "type": "shell",
+            "command": "acc s main.py -- --guess-python-interpreter pypy",
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "runOptions": {
+                "runOn": "dependencySucceeds"
+            },
+            "problemMatcher": []
+        }
+    ],
+    "inputs": [
+        {
+            "id": "contestID",
+            "type": "promptString",
+            "description": "Enter the contest ID",
+            "default": "abc123"
+        }
+    ]
+}
