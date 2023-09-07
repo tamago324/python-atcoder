@@ -1,3 +1,5 @@
+import sys
+
 # region
 
 
@@ -44,4 +46,16 @@ def main(rd: _Reader):
     pass
 
 
-main(_Reader())
+# region
+
+if __name__ == "__main__":
+    if "--debug" in sys.argv:
+        sample_number = sys.argv[sys.argv.index("--debug") + 1]
+        input_file_path = f"./tests/sample-{sample_number}.in"
+
+        # 標準入力をファイルから読み込む
+        sys.stdin = open(input_file_path, "r")
+
+    main(_Reader())
+
+# endregion

@@ -1,0 +1,26 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python: Debug Current File with sample input",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "cwd": "${fileDirname}",
+            "args": [
+                "--debug",
+                "${input:sampleNumber}"
+            ],
+            "internalConsoleOptions": "openOnSessionStart"
+        }
+    ],
+    "inputs": [
+        {
+            "id": "sampleNumber",
+            "type": "promptString",
+            "description": "Enter the sample number:",
+            "default": "1"
+        }
+    ]
+}

@@ -2,7 +2,7 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "acc new (コンテストのダウンロード)",
+            "label": "acc new",
             "type": "shell",
             "command": "acc",
             "args": [
@@ -39,10 +39,22 @@
             "options": {
                 "cwd": "${fileDirname}"
             },
-            "runOptions": {
-                "runOn": "dependencySucceeds"
-            },
             "problemMatcher": []
+        },
+        {
+            "label": "Run main.py with sample input",
+            "type": "shell",
+            "command": "cat ./tests/sample-${input:sampleNumber}.in | python3 ./main.py",
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "problemMatcher": [],
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared"
+            }
         }
     ],
     "inputs": [
@@ -51,6 +63,12 @@
             "type": "promptString",
             "description": "Enter the contest ID",
             "default": "abc123"
+        },
+        {
+            "id": "sampleNumber",
+            "type": "promptString",
+            "description": "Enter the sample number:",
+            "default": "1"
         }
     ]
 }

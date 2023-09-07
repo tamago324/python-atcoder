@@ -12,7 +12,7 @@
 
 * ログイン
   * $ acc login
-  * $ oj login https://beta.atcoder.jp/
+  * $ oj login https://atcoder.jp/
 * 問題をインストールするときに全問インストールするように変更
   * $ acc config default-task-choice all
 * テンプレートファイルの修正
@@ -20,11 +20,9 @@
     * $ cd `acc config-dir`
   * Python ディレクトリを作成して、main.py と template.json の作成をする
     ```sh
-    mkdir python
-    cd python
-    touch template.json
-    touch main.py
-    code template.json
+    mkdir `acc config-dir`/python
+    touch `acc config-dir`/python/template.json `acc config-dir`/python/main.py
+    code `acc config-dir`/python/template.json
     ```
 
     * template.json の編集
