@@ -6,6 +6,9 @@
     * コンテストのデータをダウンロード
   * test && submit
     * テストが成功したら提出する
+* Debug
+  * 「sampleを指定してデバッグ」
+    * サンプルデータを指定してデバッグを実施
 
 
 ### 初期設定
@@ -13,28 +16,12 @@
 * ログイン
   * $ acc login
   * $ oj login https://atcoder.jp/
-* 問題をインストールするときに全問インストールするように変更
-  * $ acc config default-task-choice all
-* テンプレートファイルの修正
-  * 移動
-    * $ cd `acc config-dir`
+* テンプレートのコピー
   * Python ディレクトリを作成して、main.py と template.json の作成をする
     ```sh
-    mkdir `acc config-dir`/python
-    touch `acc config-dir`/python/template.json `acc config-dir`/python/main.py
-    code `acc config-dir`/python/template.json
+    mkdir -p `acc config-dir`/python
+    cd __template
+    cp template.json `acc config-dir`/python/template.json 
+    cp main.py `acc config-dir`/python/main.py
+    cp -f config.json `acc config-dir`/config.json
     ```
-
-    * template.json の編集
-      ```json
-      {
-          "task": {
-              "program": [
-                  "main.py"
-              ],
-              "submit": "main.py"
-          }
-      }
-      ```
-* デフォルトのテンプレートを Python に変更
-  * $ acc config default-template python

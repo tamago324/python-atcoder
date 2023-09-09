@@ -2,7 +2,7 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Python: Debug Current File with sample input",
+            "name": "sampleを指定してデバッグ",
             "type": "python",
             "request": "launch",
             "program": "${file}",
