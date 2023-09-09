@@ -5,35 +5,35 @@ import sys
 
 class _Reader:
     # String
-    def readString(self) -> str:
+    def read_string(self) -> str:
         return input()
 
-    def readListString(self) -> list[str]:
-        return self.readString().split()
+    def read_list_string(self) -> list[str]:
+        return self.read_string().split()
 
-    def readNLinesString(self, n: int) -> list[str]:
-        return [self.readString() for _ in range(n)]
+    def read_n_lines_string(self, n: int) -> list[str]:
+        return [self.read_string() for _ in range(n)]
 
-    def readGridString(self, n: int) -> list[list[str]]:
-        return [list(self.readString()) for _ in range(n)]
+    def read_grid_string(self, n: int) -> list[list[str]]:
+        return [list(self.read_string()) for _ in range(n)]
 
     # Int
-    def readInt(self) -> int:
-        return int(self.readString())
+    def read_int(self) -> int:
+        return int(self.read_string())
 
-    def readListInt(self) -> list[int]:
-        return [int(x) for x in self.readListString()]
+    def read_list_int(self) -> list[int]:
+        return [int(x) for x in self.read_list_string()]
 
-    def readNLinesInt(self, n: int) -> list[int]:
-        return [int(self.readString()) for _ in range(n)]
+    def read_n_lines_int(self, n: int) -> list[int]:
+        return [int(self.read_string()) for _ in range(n)]
 
-    def readGridInt(self, n: int) -> list[list[int]]:
-        return [self.readListInt() for _ in range(n)]
+    def read_grid_int(self, n: int) -> list[list[int]]:
+        return [self.read_list_int() for _ in range(n)]
 
-    def readColumnsInt(self, m: int, n: int = 2) -> list[list[int]]:
+    def read_columns_int(self, m: int, n: int = 2) -> list[list[int]]:
         result = [list() for _ in range(n)]
         for _ in range(m):
-            row = [int(x) for x in self.readListString()]
+            row = [int(x) for x in self.read_list_string()]
             for i in range(n):
                 result[i].append(row[i])
         return result
