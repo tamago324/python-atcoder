@@ -2,7 +2,7 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "acc new",
+            "label": "download (新しいコンテストのデータをダウンロード)",
             "type": "shell",
             "command": "acc",
             "args": [
@@ -15,34 +15,16 @@
             "problemMatcher": []
         },
         {
-            "label": "test && submit",
-            "dependsOn": [
-                "Run oj",
-                "Run acc"
-            ],
-            "dependsOrder": "sequence",
-            "problemMatcher": []
-        },
-        {
-            "label": "Run oj",
+            "label": "test && submit (テストと提出)",
             "type": "shell",
-            "command": "oj t -c 'python3 main.py' -d ./tests/",
+            "command": "oj t -c 'python3 main.py' -d ./tests/ && acc s main.py -- --guess-python-interpreter pypy --yes",
             "options": {
                 "cwd": "${fileDirname}"
             },
             "problemMatcher": []
         },
         {
-            "label": "Run acc",
-            "type": "shell",
-            "command": "acc s main.py -- --guess-python-interpreter pypy",
-            "options": {
-                "cwd": "${fileDirname}"
-            },
-            "problemMatcher": []
-        },
-        {
-            "label": "Run main.py with sample input",
+            "label": "sample (サンプルを使って実行)",
             "type": "shell",
             "command": "cat ./tests/sample-${input:sampleNumber}.in | python3 ./main.py",
             "options": {

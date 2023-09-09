@@ -4,7 +4,6 @@
         "dockerfile": "Dockerfile"
     },
     "runArgs": [
-        "--rm",
         "--cap-add=SYS_PTRACE",
         "--security-opt",
         "seccomp=unconfined"

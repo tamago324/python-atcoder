@@ -17,11 +17,7 @@
   * $ acc login
   * $ oj login https://atcoder.jp/
 * テンプレートのコピー
-  * Python ディレクトリを作成して、main.py と template.json の作成をする
-    ```sh
-    mkdir -p `acc config-dir`/python
-    cd __template
-    cp template.json `acc config-dir`/python/template.json 
-    cp main.py `acc config-dir`/python/main.py
-    cp -f config.json `acc config-dir`/config.json
-    ```
+  ```
+  chmod +x __template/copy-script.sh
+  ./__template/copy-script.sh
+  ```
