@@ -1,12 +1,17 @@
 ## python-atcoder
 
 * VSCode の Remote - DevContaienr 拡張機能を使って環境を整える
-* Task
-  * acc new
+
+* Task (`tasks.json`参照)
+  * download
     * コンテストのデータをダウンロード
+    * `contests` 配下にダウンロードされる
   * test && submit
-    * テストが成功したら提出する
-* Debug
+    * サンプルでのテストと提出
+      * テストが成功したら提出を実行する
+  * sample
+    * サンプルを使って実行する
+* Debug (`launch.json`参照)
   * 「sampleを指定してデバッグ」
     * サンプルデータを指定してデバッグを実施
 
