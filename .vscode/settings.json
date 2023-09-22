@@ -1,5 +1,15 @@
 {
     "[python]": {
         "editor.defaultFormatter": "ms-python.black-formatter"
-    }
+    },
+    "explicitFolding.autoFold": "all",
+    "explicitFolding.delay": 0,
+    "editor.foldingStrategy": "auto",
+    "editor.defaultFoldingRangeProvider": "zokugun.explicit-folding",
+    "explicitFolding.rules": {
+        "*": {
+            "begin": "{{{",
+            "end": "}}}"
+        }
+    },
 }

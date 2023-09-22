@@ -1,6 +1,7 @@
+import math
 import sys
 
-# region
+# {{{ Reader
 
 
 class _Reader:
@@ -39,15 +40,18 @@ class _Reader:
         return result
 
 
-# endregion
+# }}}
+# {{{ util
+roundUp = math.ceil
+roundDown = math.floor
+# }}}
 
 
 def main(rd: _Reader):
     pass
 
 
-# region
-
+# {{{ if __name__ == "__main__"
 if __name__ == "__main__":
     if "--debug" in sys.argv:
         sample_number = sys.argv[sys.argv.index("--debug") + 1]
@@ -58,4 +62,4 @@ if __name__ == "__main__":
 
     main(_Reader())
 
-# endregion
+# }}}
