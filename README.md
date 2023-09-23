@@ -10,11 +10,6 @@
 * ログイン
   * $ acc login
   * $ oj login https://atcoder.jp/
-* テンプレートのコピー
-  ```
-  chmod +x __template/copy-script.sh
-  ./__template/copy-script.sh
-  ```
 
 ## python-atcoder
 
