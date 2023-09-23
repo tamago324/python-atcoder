@@ -1,3 +1,21 @@
+## セットアップ
+
+* clone
+  * $ gh repo clone tamago324/python-atcoder
+* clone したディレクトリを VSCode で開く
+  * 「開発コンテナで開きますか？」というダイアログが表示されるため、再度開くを選択して開発コンテナを起動する
+
+### 初期設定
+
+* ログイン
+  * $ acc login
+  * $ oj login https://atcoder.jp/
+* テンプレートのコピー
+  ```
+  chmod +x __template/copy-script.sh
+  ./__template/copy-script.sh
+  ```
+
 ## python-atcoder
 
 * VSCode の Remote - DevContaienr 拡張機能を使って環境を整える
@@ -15,14 +33,3 @@
   * 「sampleを指定してデバッグ」
     * サンプルデータを指定してデバッグを実施
 
-
-### 初期設定
-
-* ログイン
-  * $ acc login
-  * $ oj login https://atcoder.jp/
-* テンプレートのコピー
-  ```
-  chmod +x __template/copy-script.sh
-  ./__template/copy-script.sh
-  ```
