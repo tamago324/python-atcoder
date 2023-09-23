@@ -8,6 +8,7 @@
         "--security-opt",
         "seccomp=unconfined"
     ],
+    "postCreateCommand": "chmod +x __template/copy-script.sh && ./__template/copy-script.sh",
     "customizations": {
         "vscode": {
             "settings": {
