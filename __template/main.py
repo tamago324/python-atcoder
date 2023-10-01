@@ -44,6 +44,20 @@ class _Reader:
 # {{{ util
 roundUp = math.ceil
 roundDown = math.floor
+
+
+# リストを90度右回転する
+def rotate(l: list[list[str]]) -> list[list[str]]:
+    result: list[list[str]] = [[""] * len(l) for _ in range(len(l[0]))]
+    max_row_idx = len(l) - 1
+
+    for i in range(len(l)):
+        for j in range(len(l[i])):
+            result[j][max_row_idx - i] = l[i][j]
+
+    return result
+
+
 # }}}
 
 

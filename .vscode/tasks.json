@@ -37,6 +37,19 @@
                 "focus": false,
                 "panel": "shared"
             }
+        },
+        {
+            "label": "update main.py (main.pyのテンプレートを更新する)",
+            "type": "shell",
+            "command": "bash",
+            "args": [
+                "${workspaceFolder}/__template/copy-script.sh"
+            ],
+            "problemMatcher": [],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
         }
     ],
     "inputs": [
