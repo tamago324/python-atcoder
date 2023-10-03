@@ -59,6 +59,9 @@ def rotate(l: list[list[str]]) -> list[list[str]]:
 
 
 # }}}
+# {{{ const
+MOD = pow(10, 9) + 7
+# }}}
 
 
 def main(rd: _Reader):

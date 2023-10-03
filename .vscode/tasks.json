@@ -43,7 +43,7 @@
             "type": "shell",
             "command": "bash",
             "args": [
-                "${workspaceFolder}/__template/copy-script.sh"
+                "${workspaceFolder}/__template/copy-main_py.sh"
             ],
             "problemMatcher": [],
             "group": {
